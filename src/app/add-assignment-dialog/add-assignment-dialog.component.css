@@ -1,0 +1,25 @@
+mat-form-field{
+    margin-right: 10px;
+}
+.name-width{
+    width: 45%;
+}
+.desc-width{
+    width: 45%;
+}
+
+@media screen and (max-width: 959px) {
+   
+    mat-form-field{
+    margin-right: 3%;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .name-width{
+        width: 100%;
+    }
+    .desc-width{
+        width: 100%;
+    }
+}

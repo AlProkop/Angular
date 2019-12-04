@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>{{name}}</h1>
+
+<form [formGroup]="modifyForm" (ngSubmit)="onSaveSubmit()">
+ 
+<div mat-dialog-content>
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Description" formControlName="description">
+  </mat-form-field>
+  
+  <mat-form-field class="full-width">
+      <input matInput placeholder="State" formControlName="state">
+  </mat-form-field>
+
+  <mat-form-field>  
+    <input matInput [matDatepicker]="pickerFrom" placeholder="Created on" formControlName="create_date">
+    <mat-datepicker-toggle matSuffix [for]="pickerFrom"></mat-datepicker-toggle>
+    <mat-datepicker #pickerFrom></mat-datepicker>
+  </mat-form-field>
+    
+  <mat-form-field>  
+      <input matInput [matDatepicker]="pickerTill" placeholder="Due date" formControlName="due_date">
+      <mat-datepicker-toggle matSuffix [for]="pickerTill"></mat-datepicker-toggle>
+      <mat-datepicker #pickerTill></mat-datepicker>
+    </mat-form-field> 
+</div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" [mat-dialog-close]="null" >Close</button>
+    <button mat-raised-button color="primary" [disabled]="!modifyForm.valid" type="submit">Save</button>
+  </div>
+</form>
+

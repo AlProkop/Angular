@@ -1,0 +1,30 @@
+.card {
+    width: 33%;
+    display: inline-block;
+    margin-bottom: 2%;
+}
+.odd{
+    margin: 0 0.4%;
+}
+/*tablet*/
+@media screen and (max-width: 959px) {
+    .card {
+        width: 49%;
+        display: inline-block;
+        margin-bottom: 2%;
+    }
+    .odd{
+        float: right;
+    }
+    .even{
+        float: left;
+    }
+  }
+  /* mobile */
+  @media screen and (max-width: 599px) {
+    .card {
+        width: 100%;
+        display: inline-block;
+        margin-bottom: 2%;
+    }
+  }

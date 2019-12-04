@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>New course</h1>
+<form [formGroup]="addForm" (ngSubmit)="onAddCourse()">
+  <div mat-dialog-content>
+    
+    <mat-form-field class="full-width">
+      <input formControlName="name" required matInput placeholder="Name" >
+    </mat-form-field>
+    
+    <mat-form-field>  
+      <input matInput formControlName="start_date" required [matDatepicker]="pickerFrom" placeholder="Created on">
+      <mat-datepicker-toggle matSuffix [for]="pickerFrom"></mat-datepicker-toggle>
+      <mat-datepicker #pickerFrom></mat-datepicker>
+    </mat-form-field>
+      
+    <mat-form-field>
+      <input matInput formControlName="end_date" required [matDatepicker]="pickerTill" placeholder="Due date">
+      <mat-datepicker-toggle matSuffix [for]="pickerTill"></mat-datepicker-toggle>
+      <mat-datepicker #pickerTill></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" [mat-dialog-close]="null">Close</button>
+    <button type="submit" [disabled]="!addForm.valid" mat-raised-button color="primary">Save</button>
+  </div>
+</form>

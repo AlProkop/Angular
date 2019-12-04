@@ -1,0 +1,20 @@
+mat-form-field{
+    margin-right: 10px;
+}
+.full-width{
+    width: 90%;
+}
+@media screen and (max-width: 959px) {
+    .full-width{
+        width: 90%;
+    }
+    mat-form-field{
+    margin-right: 3%;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .full-width{
+        width: 95%;
+    }
+}

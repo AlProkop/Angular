@@ -1,0 +1,8 @@
+<app-header (addNew)="onAddNew()" [title]="appTitle"></app-header>
+<div *ngIf="courses" class="wripper">
+  <div class="card" *ngFor="let course of courses let odd=odd let even=even" 
+       [ngClass]="{ odd: odd, even: even }">
+    <app-course-card [course] = "course">
+    </app-course-card>
+  </div>
+</div>
